@@ -73,7 +73,7 @@ async function findSerialNo() {
   while (isEmpty(fileIndex)) {
     fileIndex = await question('Please enter the serial number of the file to copy' + '\n');
   }
-  while (fileIndex <= 0 || fileIndex > (filesInDir.length - 1)) {
+  while (fileIndex <= 0 || fileIndex > filesInDir.length ) {
     fileIndex = await question('Serial Number doesnt Exist in the directory'+'\n'+
     'Please Enter a valid serial number of the file to copy' + '\n');
   }
